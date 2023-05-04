@@ -1,3 +1,5 @@
+import styles from "./profile.css"
+
 export enum attribu{
     "name" = "name",
     "pfp" = "pfp"
@@ -42,11 +44,17 @@ attributeChangedCallback(
     render(){
         if  (this.shadowRoot){
          this.shadowRoot.innerHTML=`
-         <section class="component profile">
-<img src="${this.pfp}" class="image pfp">
-  <h3 class="username">${this.name}</h3>
+         <section class="component">
+         <img src="/src/image/Barra Naranja.jpg">
+ </section>
+ <section class= "matches">
+ <img src="/src/image/Matches.png">
+ <img src= "/src/image/Message.png">
  </section>
          `
+         const css = this.ownerDocument.createElement("style")
+css.innerHTML=styles
+this.shadowRoot?.appendChild(css)
 
 }
 }

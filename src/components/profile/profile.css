@@ -1,0 +1,20 @@
+.image{ 
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    margin-left: 100%;
+    
+}
+
+.username{
+    color: black;
+    margin-top: -4%;
+}
+
+.matches {
+        display: flex;
+        flex-direction: row;
+        margin-left: 20%;
+}

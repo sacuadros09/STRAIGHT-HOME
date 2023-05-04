@@ -1,103 +1,102 @@
 body{
-    margin: 0%;
-  }
+  margin: 0%;
+}
+
+.matche{
+  display: flex;
+  flex-direction: row;
+}
+.section1{
+  position: fixed;
+  top: 24%;
+  left: 0;
+  width: 50%;
+  border: gray 1px solid;
+  border-left: none;
+  border-bottom: none;
+  border-top: none;
+}
+.message-container {
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  width: 100%;
+  z-index: 9999;
+
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+}
+
+.profile-pic img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 12px;
+  padding-left: 5%;
+
+
+}
+
+.user-info {
+  flex-grow: 1;
+
+}
+
+.user-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.message-text {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+
+}
+
+.message-separator {
+  padding-bottom: 5%;
+  margin: 1px 0;
+  border: none;
+  border-top: 1px solid #252525;
+  width: 555px;
+ 
+}
+
+.profile{
+  background-color: orange;
+  text-align: center;
+  width: 50%;
+
+}
+
+.userpfp{
+  border-radius: 50%;
+    width: 70px;
+    height: 70px;
   
-  .matche{
-    display: flex;
-    flex-direction: row;
-  }
+}
+@media screen and(max-width:400px) {
+  .sectiongrande1{
+      display: none;
+      }
+      .sectiongrande2{
+          display: none;
+          }
   .section1{
-    position: fixed;
-    top: 24%;
-    left: 0;
-    width: 50%;
-    border: gray 1px solid;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
+    display: none;
   }
-  .message-container {
-    top: 50%;
-    left: 50%;
-    max-width: 400px;
-    width: 100%;
-    z-index: 9999;
-  
+  .matche{
+    display: none;
   }
-  
-  .message {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-  
+  .message{
+   display: none;
   }
-  
-  .profile-pic img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 12px;
-    padding-left: 5%;
-  
-  
   }
-  
-  .user-info {
-    flex-grow: 1;
-  
-  }
-  
-  .user-name {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-  
-  }
-  
-  .message-text {
-    margin: 0;
-    font-size: 16px;
-    color: #555;
-  
-  }
-  
-  .message-separator {
-    padding-bottom: 5%;
-    margin: 1px 0;
-    border: none;
-    border-top: 1px solid #252525;
-    width: 555px;
-   
-  }
-  
-  .profile{
-    background-color: orange;
-    text-align: center;
-    width: 50%;
-  
-  }
-  
-  .userpfp{
-    border-radius: 50%;
-      width: 70px;
-      height: 70px;
-    
-  }
-  @media screen and(max-width:400px) {
-    .sectiongrande1{
-        display: none;
-        }
-        .sectiongrande2{
-            display: none;
-            }
-    .section1{
-      display: none;
-    }
-    .matche{
-      display: none;
-    }
-    .message{
-     display: none;
-    }
-    }
-  

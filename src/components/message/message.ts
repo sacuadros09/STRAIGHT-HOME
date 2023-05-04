@@ -1,4 +1,4 @@
-import message from "./message.css"
+import styles from "./message.css"
 
 export enum attribute {
     "name" = "name",
@@ -66,6 +66,10 @@ render(){
 </div>
 <hr class="message-separator">
 `
+
+const css = this.ownerDocument.createElement("style")
+css.innerHTML=styles
+this.shadowRoot?.appendChild(css)
 }
    } 
 

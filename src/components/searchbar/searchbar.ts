@@ -1,3 +1,5 @@
+import styles from "./searchbar.css"
+
 class Search extends HTMLElement {
 
     constructor(){
@@ -34,6 +36,10 @@ class Search extends HTMLElement {
 
         </section>
         `
+
+        const css = this.ownerDocument.createElement("style")
+css.innerHTML=styles
+this.shadowRoot?.appendChild(css)
     }
 }
 

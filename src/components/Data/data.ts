@@ -19,7 +19,7 @@ export const dataprofile:Dataprofile[] =[
         name:"Julieth",
         pfp:"/src/image/Julieth.jpeg", 
         message:"Your so sexy",
-        uploadimage:"./src/image/Cuadros aceptado.png",
+        uploadimage:"/src/image/Cuadros aceptado.png",
         hour:"2 h",
         description:"MY ADMV!!!!!"
         },

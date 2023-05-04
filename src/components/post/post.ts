@@ -1,3 +1,5 @@
+import styles from "./post.css"
+
 export enum attribut {
     "name" = "name",
     "pfp" = "pfp",
@@ -71,6 +73,9 @@ attributeChangedCallback(
 </section>
 
     `
+    const css = this.ownerDocument.createElement("style")
+css.innerHTML=styles
+this.shadowRoot?.appendChild(css)
 }
 }
 

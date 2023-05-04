@@ -1,3 +1,5 @@
+import styles from "./dashboard.css"
+
 import "../components/export"
 import {dataprofile} from "../components/Data/data"
 import {attribute} from "../components/message/message"
@@ -30,13 +32,12 @@ render(){
         searchBar.className = "top"
         rightpost.appendChild(searchBar)
 
-// dataprofile.forEach((dat)=>{
-          //  const profile = this.ownerDocument.createElement("my-profile");
-               // profile.setAttribute(attribu.name, dat.name);
-               // profile.setAttribute(attribu.pfp, dat.pfp);
-             //  leftmessage.appendChild(profile)
     
-      //  });
+            const profile = this.ownerDocument.createElement("my-profile");
+                profile.setAttribute(attribu.name, dataprofile[5].name);
+                profile.setAttribute(attribu.pfp, dataprofile[5].pfp);
+                leftmessage.appendChild(profile)
+            
 
         dataprofile.forEach((dat)=>{
             const message = this.ownerDocument.createElement("my-message");
@@ -64,7 +65,9 @@ render(){
 
     this.shadowRoot?.appendChild (countainer)
 
-
+    const css = this.ownerDocument.createElement("style")
+    css.innerHTML=styles
+    this.shadowRoot?.appendChild(css)
 }
 
 }
