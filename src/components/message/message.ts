@@ -1,11 +1,13 @@
+import message from "./message.css"
+
 export enum attribute {
     "name" = "name",
-    "pfp" = "pfp",
+    "pfp" = "pfp",  
     "message" = "message",
     "uploadimage" = "uploadimage"
 }
 
-class Mymessage extends HTMLElement{
+class Mymessage extends HTMLElement{    
     name?: string;
     pfp?: string;
    message?: string;
