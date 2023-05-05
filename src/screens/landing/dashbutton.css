@@ -1,6 +1,7 @@
 .all{
     display: flex;
-    background-color: rgb(20, 205, 251);
+    background-image: url(https://media.idownloadblog.com/wp-content/uploads/2014/09/Delphox-Designs-iOS-8-Desktop-Wallpaper-2.jpg);
+    background-repeat: no-repeat;
     width: 98.9.54vw;
     height: 53vw;
     margin-top: -1%;
@@ -8,3 +9,23 @@
     margin-bottom: -1%;
 }
 
+.left{
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+.right{
+    padding-left: 24%;
+    padding-top: 2.5%;
+}
+
+.center{
+    color: white;
+    padding-top: 20%;
+    padding-left: 34%;
+    
+}
+
+h2{
+    
+}
