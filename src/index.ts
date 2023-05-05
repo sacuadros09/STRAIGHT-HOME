@@ -2,6 +2,7 @@ import "./components/export"
 import "./screens/dashboard"
 import"./screens/login/dashlogin"
 import "./screens/register/dashregister"
+import "./screens/landing/dashbutton"
 import { addObserver, appState } from "./store/index";
 import { Screens } from "./types/store";
 
@@ -20,6 +21,11 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot)this.shadowRoot.innerHTML="";
         switch (appState.screen) {
+
+            case Screens.LANDING:
+                const land = this.ownerDocument.createElement('app-dashlanding');
+                this.shadowRoot?.appendChild(land);
+                break;
             
             case Screens.SIGNUP:
                 const something = this.ownerDocument.createElement('app-dashregister');
@@ -35,6 +41,7 @@ class AppContainer extends HTMLElement {
                 const dash = this.ownerDocument.createElement('app-dashboard');
                 this.shadowRoot?.appendChild(dash);
                 break;
+
             
             default:
                 break;

@@ -48,7 +48,11 @@ render(){
             message.setAttribute(attribute.pfp, dat.pfp);
             message.setAttribute(attribute.message, dat.message);
             message.setAttribute(attribute.uploadimage, dat.uploadimage);
+            message.addEventListener("click",()=>{
+            dispatch(navigate(Screens.LANDING))
+        })
             leftmessage.appendChild(message)
+            
 
             
         });
@@ -74,7 +78,7 @@ render(){
     const css = this.ownerDocument.createElement("style")
     css.innerHTML=styles
     this.shadowRoot?.appendChild(css)
-}
+}{}
 
 }
 

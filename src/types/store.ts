@@ -1,9 +1,11 @@
 export type Observer = { render: () => void } & HTMLElement;
 
 export enum Screens {
+  LANDING = "LANDING",
   LOGIN = "LOGIN",
   SIGNUP = "SIGNUP",
   DASHBOARD = "DASHBOARD",
+
 }
 
 export type AppState = {
