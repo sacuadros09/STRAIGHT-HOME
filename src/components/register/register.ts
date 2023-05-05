@@ -1,23 +1,23 @@
-import styles from "./login.css"
+import styles from "./register.css"
 
-export enum attr {
+export enum att {
     "placeholder" = "placeholder",
     "type" = "type",
 }
 
-  class loginput extends HTMLElement{
+  class reginput extends HTMLElement{
     placeholder?: string;
     type?: string;
    
 
 static get observedAttributes() {
-    const attr: Record<attr,null> ={
+    const att: Record<att,null> ={
 
         placeholder: null,
         type: null,
 
     };
-    return Object.keys(attr);
+    return Object.keys(att);
 }
 
 constructor() {
@@ -25,7 +25,7 @@ constructor() {
     this.attachShadow({mode:"open"});
 }
 attributeChangedCallback(
-    propName: attr,
+    propName: att,
     _: string | undefined,
     newValue: string | undefined
     ) {
@@ -44,10 +44,10 @@ attributeChangedCallback(
         if(this.shadowRoot){
             this.shadowRoot.innerHTML= "";
 
-            const log = this.ownerDocument.createElement("input")
-            log.placeholder = `${this.placeholder}`
-            log.type= `${this.type}`
-            this.shadowRoot?.appendChild(log)
+            const reg = this.ownerDocument.createElement("input")
+            reg.placeholder = `${this.placeholder}`
+            reg.type= `${this.type}`
+            this.shadowRoot?.appendChild(reg)
 
             const css = this.ownerDocument.createElement("style")
             css.innerHTML=styles
@@ -62,5 +62,5 @@ attributeChangedCallback(
 
 
 
-customElements.define("my-loginput",loginput);
-export default loginput;
+customElements.define("my-reginput",reginput);
+export default reginput;

@@ -1,6 +1,7 @@
 import "./components/export"
 import "./screens/dashboard"
 import"./screens/login/dashlogin"
+import "./screens/register/dashregister"
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -13,7 +14,7 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const something = this.ownerDocument.createElement('app-dashlogin');
+        const something = this.ownerDocument.createElement('app-dashregister');
         this.shadowRoot?.appendChild(something);
     }
 }
