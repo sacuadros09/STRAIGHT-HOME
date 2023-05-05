@@ -1,6 +1,9 @@
 import { att } from "../../components/register/register";
 import styles from "./dashregister.css"
 import {reginput} from "../register/dashregister.css"
+import { dispatch } from "../../store/index";
+import { navigate } from "../../store/action";
+import { Screens } from "../../types/store";
 
 export class dashregister extends HTMLElement {
     constructor() {
@@ -96,6 +99,9 @@ connectedCallback(){
             const button = this.ownerDocument.createElement("my-butregister");
             button.className = "butinput"
             button.innerText= "Contraseña"
+            button.addEventListener("click",()=>{
+                dispatch(navigate(Screens.LOGIN))
+            })
             rightregister.appendChild(button)
 
 

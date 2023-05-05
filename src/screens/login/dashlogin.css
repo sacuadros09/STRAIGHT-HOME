@@ -1,8 +1,7 @@
 .all{
     display: flex;
-    flex-direction: row;
-    background: rgb(255, 255, 255);
-    width: 100.54vw;
+    background-image: url(https://wallpaper.dog/large/10735273.jpg);
+    width: 98.9.54vw;
     height: 53vw;
     margin-top: -1%;
     margin-left: -1%;
@@ -11,14 +10,8 @@
 
 .left{
     margin-left: 16%;
-    margin-top: 10%;
+    margin-top: 9%;
 }
-
-.imgs{
-    margin-left: 8%;
-    margin-top: 3%;
-}
-
 
 .right{
 
@@ -27,5 +20,41 @@
     max-height: 64.3%;
     min-width: 40%;
     border-radius: 0% 6% 6% 0%;
-   }
     
+}
+
+.imgs{
+    margin-left: 8%;    
+    margin-top: 3%;
+}
+
+h2{
+    margin-left: 8%;
+    font-size: 35px;
+    
+
+}
+
+h1{
+    margin-left: 8%;
+    margin-top: 3%;
+}
+
+.emailinput{
+    margin-left: 8%;
+    margin-top: 3%;
+}
+
+.passinput{
+    margin-left: 8%;
+    margin-top: 3%;
+}
+
+.butinput{
+    margin-left: 8%;
+    margin-top: 3%;
+}
+
+.have{
+    color: rgb(235, 125, 91);
+}

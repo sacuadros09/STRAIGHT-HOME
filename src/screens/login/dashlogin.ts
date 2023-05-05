@@ -1,6 +1,9 @@
 import { attr } from "../../components/login/login";
 import styles from "./dashlogin.css"
 import {loginput} from "../login/dashlogin.css"
+import { dispatch } from "../../store/index";
+import { navigate } from "../../store/action";
+import { Screens } from "../../types/store";
 
 export class dashlogin extends HTMLElement {
     constructor() {
@@ -23,23 +26,28 @@ connectedCallback(){
         const rightlogin = this.ownerDocument.createElement("section")
         rightlogin.className= "right"
 
-        const img2 = this.ownerDocument.createElement("img")
-        img2.className = "imgs"
-            img2.src="/src/image/negro.png"
-            leftphoto.appendChild(img2)
+        const body = this.ownerDocument.createElement("div")
+        body.className = "body"
+        this.shadowRoot?.appendChild(body)
 
         const img = this.ownerDocument.createElement("img")
         img.className = "imgs"
             img.src="/src/image/straight.png"
             rightlogin.appendChild(img)
 
+            const img2 = this.ownerDocument.createElement("img")
+            img2.className = "imgs"
+                img2.src="/src/image/negro.png"
+               leftphoto.appendChild(img2)
+    
         const create = this.ownerDocument.createElement("h2")
         create.innerText = "Iniciar sesión"
          rightlogin.appendChild(create)
 
 
          const account = this.ownerDocument.createElement("h1")
-         account.innerText = "¿No tienes una cuenta? Regístrate"
+         account.className = "have"
+         account.innerText = "¿No tienes una cuenta? Regístrate"    
           rightlogin.appendChild(account)
 
           const usuario = this.ownerDocument.createElement("h1")
@@ -47,6 +55,7 @@ connectedCallback(){
           rightlogin.appendChild(usuario)
           
             const login = this.ownerDocument.createElement("my-loginput");
+            login.className = "emailinput"
             login.setAttribute(attr.placeholder,"email");
             login.setAttribute(attr.type,"email" );
             rightlogin.appendChild(login)
@@ -56,6 +65,7 @@ connectedCallback(){
              rightlogin.appendChild(email)
 
             const password = this.ownerDocument.createElement("my-loginput");
+            password.className = "passinput"
             password.setAttribute(attr.placeholder,"password");
             password.setAttribute(attr.type,"password" );
             rightlogin.appendChild(password)
@@ -66,7 +76,11 @@ connectedCallback(){
 
 
             const button = this.ownerDocument.createElement("my-butlogin");
+            button.className = "butinput"
             button.innerText= "Iniciar sesión"
+            button.addEventListener("click",()=>{
+                dispatch(navigate(Screens.DASHBOARD))
+            })
             rightlogin.appendChild(button)
 
            
@@ -78,9 +92,10 @@ connectedCallback(){
 
 
 
-
+            countainer.appendChild(leftphoto)
             countainer.appendChild(rightlogin)
-            
+            countainer.appendChild(body)
+       
         
             this.shadowRoot?.appendChild (countainer)
 
