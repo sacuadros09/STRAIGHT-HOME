@@ -5,6 +5,9 @@ import {dataprofile} from "../components/Data/data"
 import {attribute} from "../components/message/message"
 import {attribut} from "../components/post/post"
 import {attribu} from "../components/profile/profile"
+import { dispatch } from "../store/index"
+import { navigate } from "../store/action"
+import { Screens } from "../types/store"
 
 
 export class Dashboard extends HTMLElement {
@@ -57,6 +60,9 @@ render(){
             post.setAttribute(attribut.hour, dat.hour);
             post.setAttribute(attribut.description, dat.description);
             post.setAttribute(attribut.uploadimage, dat.uploadimage);
+            post.addEventListener("click",()=>{
+                dispatch(navigate(Screens.SIGNUP))
+            })
             rightpost.appendChild(post)
 
     });

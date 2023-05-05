@@ -35,14 +35,10 @@ class AppContainer extends HTMLElement {
                 const dash = this.ownerDocument.createElement('app-dashboard');
                 this.shadowRoot?.appendChild(dash);
                 break;
-        
+            
             default:
                 break;
         }
-
-
-       // const something = this.ownerDocument.createElement('app-dashlogin');
-        //this.shadowRoot?.appendChild(something);
     }
 }
 
