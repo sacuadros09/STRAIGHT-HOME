@@ -49,9 +49,12 @@ attributeChangedCallback(
             reg.type= `${this.type}`
             this.shadowRoot?.appendChild(reg)
 
+            
+
             const css = this.ownerDocument.createElement("style")
             css.innerHTML=styles
             this.shadowRoot?.appendChild(css)
+
             
         }
     }

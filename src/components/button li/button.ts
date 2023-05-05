@@ -23,6 +23,8 @@ import styles from "./button.css"
             button.innerText = "Iniciar sesión"
             
             this.shadowRoot?.appendChild(button)
+
+            
         }
     }
 }

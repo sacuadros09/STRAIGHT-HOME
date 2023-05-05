@@ -14,14 +14,31 @@ connectedCallback(){
     render(){
         if(this.shadowRoot){
 
+
             const countainer = this.ownerDocument.createElement("section")
         countainer.className ="all"
+
+        const back = this.ownerDocument.createElement("section")
+        back.className ="fondo"
+
 
         const leftphoto = this.ownerDocument.createElement("section")
         leftphoto.className ="left"
 
         const rightregister = this.ownerDocument.createElement("section")
         rightregister.className= "right"
+
+        const img = this.ownerDocument.createElement("img")
+            img.src="/src/image/straight.png"
+            rightregister.appendChild(img)
+
+            const feliz = this.ownerDocument.createElement("img")
+            feliz.src="/src/image/fondo feliz.png"
+            leftphoto.appendChild(feliz)
+
+            const fondo = this.ownerDocument.createElement("img")
+            fondo.src="/src/image/fondo.png.png"
+            back.appendChild(fondo)
 
         const create = this.ownerDocument.createElement("h2")
         create.innerText = "Crear una cuenta"
@@ -67,6 +84,8 @@ connectedCallback(){
             button.innerText= "Contraseña"
             rightregister.appendChild(button)
 
+           
+
 
 
 
@@ -78,6 +97,8 @@ connectedCallback(){
 
 
             countainer.appendChild(rightregister)
+            countainer.appendChild(leftphoto)
+            countainer.appendChild(back)
         
             this.shadowRoot?.appendChild (countainer)
 
