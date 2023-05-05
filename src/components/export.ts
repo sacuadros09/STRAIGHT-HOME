@@ -1,0 +1,8 @@
+export {default as Mymessage} from "./message/message"
+export {default as Mypost} from "./post/post"
+export {default as Search} from "./searchbar/searchbar"
+export {default as Myprofile} from "./profile/profile"
+export {default as loginput} from "./login/login"
+export {default as butlogin} from "./button li/button"
+export {default as butregister} from "./button re/button"
+export {default as reginput} from "./register/register"

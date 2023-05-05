@@ -1,0 +1,31 @@
+.all{
+    display: flex;
+    flex-direction: row;
+    background: rgb(255, 255, 255);
+    width: 100.54vw;
+    height: 53vw;
+    margin-top: -1%;
+    margin-left: -1%;
+    margin-bottom: -1%;
+}
+
+.left{
+    margin-left: 16%;
+    margin-top: 10%;
+}
+
+.imgs{
+    margin-left: 8%;
+    margin-top: 3%;
+}
+
+
+.right{
+
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255);
+    max-height: 64.3%;
+    min-width: 40%;
+    border-radius: 0% 6% 6% 0%;
+   }
+    
