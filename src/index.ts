@@ -1,5 +1,6 @@
 import "./components/export"
 import "./screens/dashboard"
+import"./screens/login/dashlogin"
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -12,7 +13,7 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const something = this.ownerDocument.createElement('app-dashboard');
+        const something = this.ownerDocument.createElement('app-dashlogin');
         this.shadowRoot?.appendChild(something);
     }
 }
