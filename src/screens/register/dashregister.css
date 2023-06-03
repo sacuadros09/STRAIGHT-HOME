@@ -64,3 +64,19 @@ h1{
 .have{
     color: rgb(235, 125, 91);
 }
+
+form{
+    background: #E94E1B;
+    border-radius: 40px;
+    color: white;
+    width: 50%;
+    height: 5%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 33px;
+    margin-bottom: 42px;
+    margin-top: 20px;
+    
+   
+}

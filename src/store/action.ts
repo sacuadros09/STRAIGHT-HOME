@@ -6,3 +6,10 @@ export const navigate = (screen: Screens): NavigateAction => {
     payload: screen,
   };
 };
+
+export const setUserCredentials = (user: string) => {
+  return {
+    type:"SETUSER",
+    payload: user,
+  }
+  }

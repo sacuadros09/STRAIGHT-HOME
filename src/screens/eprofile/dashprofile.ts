@@ -1,16 +1,16 @@
 import styles from "./dashboard.css"
 
 import "../components/export"
-import {dataprofile} from "../components/Data/data"
-import {attribute} from "../components/friends/friends"
-import {attribut} from "../components/post/post"
-import {attribu} from "../components/profile/profile"
-import { dispatch } from "../store/index"
-import { navigate } from "../store/action"
-import { Screens } from "../types/store"
+import { Dataprofile, dataprofile } from "../../components/Data/data"
+import { attribute } from "../../components/friends/friends"
+import { attribut } from "../../components/post/post"
+import { attribu } from "../../components/profile/profile"
+import { dispatch } from "../../store"
+import { navigate } from "../../store/action"
+import { Screens } from "../../types/store"
 
 
-export class Dashboard extends HTMLElement {
+export class Dashprofile extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });   
@@ -59,6 +59,9 @@ render(){
             
         });
 
+
+        
+
         dataprofile.forEach((dat)=>{
         const post = this.ownerDocument.createElement("my-post");
             post.setAttribute(attribut.name, dat.name);
@@ -86,4 +89,4 @@ render(){
 
 }
 
-customElements.define("app-dashboard", Dashboard);
+customElements.define("dash-profile", Dashprofile);

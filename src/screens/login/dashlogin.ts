@@ -17,6 +17,8 @@ connectedCallback(){
     render(){
         if(this.shadowRoot){
 
+            const loges= this.ownerDocument.createElement("app-listlogin");
+
             const countainer = this.ownerDocument.createElement("section")
         countainer.className ="all"
 
@@ -50,39 +52,9 @@ connectedCallback(){
          account.innerText = "¿No tienes una cuenta? Regístrate"    
           rightlogin.appendChild(account)
 
-          const usuario = this.ownerDocument.createElement("h1")
-         usuario.innerText = "Email"
-          rightlogin.appendChild(usuario)
-          
-            const login = this.ownerDocument.createElement("my-loginput");
-            login.className = "emailinput"
-            login.setAttribute(attr.placeholder,"email");
-            login.setAttribute(attr.type,"email" );
-            rightlogin.appendChild(login)
-
-            const email = this.ownerDocument.createElement("h1")
-            email.innerText = "Contraseña"
-             rightlogin.appendChild(email)
-
-            const password = this.ownerDocument.createElement("my-loginput");
-            password.className = "passinput"
-            password.setAttribute(attr.placeholder,"password");
-            password.setAttribute(attr.type,"password" );
-            rightlogin.appendChild(password)
-
-            const espacio = this.ownerDocument.createElement("h1")
-            espacio.innerText = ""
-             rightlogin.appendChild(espacio)
 
 
-            const button = this.ownerDocument.createElement("my-butlogin");
-            button.className = "butinput"
-            button.innerText= "Iniciar sesión"
-            button.addEventListener("click",()=>{
-                dispatch(navigate(Screens.DASHBOARD))
-            })
-            rightlogin.appendChild(button)
-
+           
            
 
 
@@ -98,6 +70,7 @@ connectedCallback(){
        
         
             this.shadowRoot?.appendChild (countainer)
+            this.shadowRoot?.appendChild(loges);
 
             const css = this.ownerDocument.createElement("style")
             css.innerHTML=styles

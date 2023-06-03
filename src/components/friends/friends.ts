@@ -1,4 +1,4 @@
-import styles from "./message.css"
+import styles from "./friends.css"
 
 export enum attribute {
     "name" = "name",

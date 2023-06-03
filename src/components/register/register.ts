@@ -1,5 +1,6 @@
 import styles from "./register.css"
-
+import Firebase from "../../utils/firebase"
+const credentials = { email: "", password: "" };
 export enum att {
     "placeholder" = "placeholder",
     "type" = "type",
@@ -39,15 +40,27 @@ attributeChangedCallback(
     connectedCallback(){
         this.render();
     }
-
+    async Regfirebase(){
+        Firebase.Authregister(credentials);
+    }
     render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML= "";
 
             const reg = this.ownerDocument.createElement("input")
-            reg.placeholder = `${this.placeholder}`
-            reg.type= `${this.type}`
+            reg.placeholder = "Registrarse"
+            reg.type= "password"
             this.shadowRoot?.appendChild(reg)
+            reg.addEventListener(
+                "change",
+                (s: any) => (credentials.password = s.target.value)
+              );
+
+            const button= this.ownerDocument.createElement("button");
+            button.innerText = "Regístrate"
+            button.addEventListener("click",this.Regfirebase)
+            
+            this.shadowRoot?.appendChild(button)
 
             
 

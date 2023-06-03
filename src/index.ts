@@ -3,13 +3,14 @@ import "./screens/dashboard"
 import"./screens/login/dashlogin"
 import "./screens/register/dashregister"
 import "./screens/landing/dashbutton"
+
 import { addObserver, appState } from "./store/index";
 import { Screens } from "./types/store";
 
 
 class AppContainer extends HTMLElement {
     constructor(){
-        super();
+        super();   
         this.attachShadow({mode: "open"})
         addObserver(this)
     }
@@ -42,6 +43,12 @@ class AppContainer extends HTMLElement {
                 this.shadowRoot?.appendChild(dash);
                 break;
 
+                case Screens.PROFILE:
+                    const profile = this.ownerDocument.createElement('dash-profile');
+                    this.shadowRoot?.appendChild(profile);
+                    break;
+
+                  
             
             default:
                 break;

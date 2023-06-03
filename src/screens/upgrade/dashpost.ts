@@ -1,16 +1,16 @@
-import styles from "./dashboard.css"
+import styles from ".dashpost.css"
 
 import "../components/export"
-import {dataprofile} from "../components/Data/data"
-import {attribute} from "../components/friends/friends"
-import {attribut} from "../components/post/post"
-import {attribu} from "../components/profile/profile"
-import { dispatch } from "../store/index"
-import { navigate } from "../store/action"
-import { Screens } from "../types/store"
+import { dataprofile } from "../../components/Data/data"
+import { attribute } from "../../components/friends/friends"
+import { attribut } from "../../components/post/post"
+import { attribu } from "../../components/profile/profile"
+import { dispatch } from "../../store"
+import { navigate } from "../../store/action"
+import { Screens } from "../../types/store"
 
 
-export class Dashboard extends HTMLElement {
+export class Dashpost extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });   
@@ -35,6 +35,10 @@ render(){
         searchBar.className = "top"
         rightpost.appendChild(searchBar)
 
+        const centerpost = this.ownerDocument.createElement("section")
+        centerpost.className = "center"
+        centerpost.appendChild(centerpost)
+
     
             const profile = this.ownerDocument.createElement("my-profile");
                 profile.setAttribute(attribu.name, dataprofile[5].name);
@@ -53,11 +57,38 @@ render(){
             message.addEventListener("click",()=>{
             dispatch(navigate(Screens.LANDING))
         })
+        
             leftmessage.appendChild(message)
-            
+            const imgs = this.ownerDocument.createElement("img")
+            imgs.className = "imgs"
+            imgs.src="/src/image/Cuadros.jpeg"
+            rightpost.appendChild(imgs)
+
+            const namesacuadros  = this.ownerDocument.createElement("h2")
+            namesacuadros.className = "namesacuadros"
+            namesacuadros.innerText = "Sacuadros09"
+        rightpost.appendChild(namesacuadros)
+
+         const namehour  = this.ownerDocument.createElement("h2")
+         namehour.className = "namehour"
+         namehour.innerText = "13 h"
+         rightpost.appendChild(namehour)
+
+         const imgpoints = this.ownerDocument.createElement("img")
+         imgpoints.className = "imgs"
+         imgpoints.src="/src/image/Icono de configuración.png"
+            rightpost.appendChild(imgpoints)
+         
+            const imgname = this.ownerDocument.createElement("img")
+            imgname.className = "imgs"
+            imgname.src="/src/image/Anne aceptado.png"
+            rightpost.appendChild(imgname)
 
             
         });
+
+
+        
 
         dataprofile.forEach((dat)=>{
         const post = this.ownerDocument.createElement("my-post");
@@ -74,6 +105,7 @@ render(){
     });
     countainer.appendChild(leftmessage)
     countainer.appendChild(rightpost)
+    countainer.appendChild(centerpost)
 
     this.shadowRoot?.appendChild (countainer)
 
@@ -86,4 +118,4 @@ render(){
 
 }
 
-customElements.define("app-dashboard", Dashboard);
+customElements.define("app-dashpost", Dashpost);

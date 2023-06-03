@@ -1,0 +1,28 @@
+button{
+    background: #E94E1B;
+    border-radius: 40px;
+    color: white;
+    width: 40%;
+    height: 5%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 33px;
+    margin-bottom: 42px;
+    margin-top: 20px;
+    
+   
+}
+
+.logear {
+    width: 30%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0px;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 40px;    
+    box-sizing: border-box;
+    margin-top: 8px;
+    
+}

@@ -17,12 +17,10 @@ connectedCallback(){
     render(){
         if(this.shadowRoot){
 
-
-            
-
-
             const countainer = this.ownerDocument.createElement("section")
         countainer.className ="all"
+
+        const form = this.ownerDocument.createElement("app-listregister");
 
         const back = this.ownerDocument.createElement("section")
         back.className ="fondo"
@@ -50,8 +48,6 @@ connectedCallback(){
             rightregister.appendChild(img)
 
 
-
-
         const create = this.ownerDocument.createElement("h2")
         create.innerText = "Crear una cuenta"
          rightregister.appendChild(create)
@@ -62,47 +58,6 @@ connectedCallback(){
          rightregister.appendChild(have)
 
          
-         const usuario = this.ownerDocument.createElement("h1")
-         usuario.innerText = "Usuario"
-          rightregister.appendChild(usuario)
-        
-            const register = this.ownerDocument.createElement("my-reginput");
-            register.className = "userinput"
-            register.setAttribute(att.placeholder,"Usuario");
-            register.setAttribute(att.type,"Usuario" );
-            rightregister.appendChild(register)
-
-            const correo = this.ownerDocument.createElement("h1")
-            correo.innerText = "Email"
-             rightregister.appendChild(correo)
-
-            const email = this.ownerDocument.createElement("my-reginput");
-            email.className = "emailinput"
-            email.setAttribute(att.placeholder,"Email");
-            email.setAttribute(att.type,"Email" );
-            rightregister.appendChild(email)
-
-            const pass = this.ownerDocument.createElement("h1")
-            pass.innerText = "Contraseña"
-             rightregister.appendChild(pass)
-
-            const password = this.ownerDocument.createElement("my-reginput");
-            password.className = "passinput"
-            password.setAttribute(att.placeholder,"Contraseña");
-            password.setAttribute(att.type,"Contraseña" );
-            rightregister.appendChild(password)
-
-            const espacio = this.ownerDocument.createElement("h1")
-            espacio.innerText = ""
-             rightregister.appendChild(espacio)
-
-            const button = this.ownerDocument.createElement("my-butregister");
-            button.className = "butinput"
-            button.innerText= "Contraseña"
-            button.addEventListener("click",()=>{
-                dispatch(navigate(Screens.LOGIN))
-            })
-            rightregister.appendChild(button)
 
 
         
@@ -122,8 +77,10 @@ connectedCallback(){
             countainer.appendChild(rightregister)
             countainer.appendChild(back)
             countainer.appendChild(body)
+            countainer.appendChild(form)
         
             this.shadowRoot?.appendChild (countainer)
+            this.shadowRoot?.appendChild(form);
 
             const css = this.ownerDocument.createElement("style")
             css.innerHTML=styles
